@@ -1,0 +1,453 @@
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+  background-color: var(--background-white);
+  transition: all 0.3s ease;
+}
+
+.scrolled {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Top Ribbon */
+.topRibbon {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.topInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+/* Main Ribbon */
+.mainRibbon {
+  background-color: var(--background-white);
+  padding: 0.5rem 0;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--primary-dark);
+}
+
+/* Navigation Menu */
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navLink:hover, 
+.navLink.active {
+  color: var(--primary-color);
+}
+
+.dropdownIcon {
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.active .dropdownIcon {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.hasDropdown {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownItem {
+  position: relative;
+}
+
+.dropdownLink {
+  display: block;
+  padding: 0.7rem 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dropdownLink:hover {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+}
+
+/* Submenu */
+.hasSubmenu {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  z-index: 101;
+}
+
+.submenu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.submenuLink {
+  display: block;
+  padding: 0.7rem 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.submenuLink:hover {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+}
+
+.appointmentButton {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 1rem;
+  display: none;
+}
+
+.appointmentButton a {
+  color: white;
+  text-decoration: none;
+}
+
+.appointmentButton:hover {
+  background-color: var(--secondary-dark);
+}
+
+/* Mobile Elements */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: var(--text-primary);
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.mobileCloseButton {
+  display: none;
+}
+
+/* Media Queries */
+@media (min-width: 1025px) {
+  .appointmentButton {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topRibbon {
+    display: none;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: var(--background-white);
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    transition: 0.3s;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    overflow-y: auto;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+  
+  .navItem {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 0;
+  }
+  
+  .navLink {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    width: 100%;
+    display: block;
+  }
+  
+  .dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .dropdown.show {
+    max-height: 500px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dropdownLink {
+    padding: 0.7rem 1rem;
+    padding-left: 2rem;
+  }
+  
+  .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .submenu.show {
+    max-height: 500px;
+    margin-top: 0.5rem;
+  }
+  
+  .submenuLink {
+    padding: 0.7rem 1rem;
+    padding-left: 3rem;
+  }
+  
+  .mobileOnly {
+    display: block;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  .mobileContactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mobileContactItem {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-secondary);
+  }
+  
+  .mobileSocial {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mobileSocialIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--background-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  
+  .mobileSocialIcon:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .appointmentButton {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .mobileCloseButton {
+    display: block;
+    margin-top: 2rem;
+    padding: 0.8rem;
+    background-color: var(--text-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .mobileCloseButton:hover {
+    background-color: #1a1a1a;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .navMenu {
+    padding: 1.5rem;
+  }
+}
