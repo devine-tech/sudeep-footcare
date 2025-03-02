@@ -7,8 +7,8 @@ const ContactUsPage = () => {
     <div className={styles.contactPage}>
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1>Contact Us</h1>
-          <p>We're here to help with all your diabetic foot care needs</p>
+          <h1 style={{ color: 'white'}}>Contact Us</h1>
+          <p style={{ color: 'white'}}>We're here to help with all your diabetic foot care needs</p>
         </div>
       </div>
 
@@ -27,7 +27,7 @@ const ContactUsPage = () => {
                   <div className={styles.infoIcon}>📍</div>
                   <div className={styles.infoContent}>
                     <h3>Visit Us</h3>
-                    <p>123 Healthcare Avenue, Mumbai, India</p>
+                    <p>Sudeep Hospital, Prasham Building, Opp. Lavanya Mall,<br /> Near Ashok Pan House, Citilight Road, Surat</p>
                   </div>
                 </div>
                 
@@ -35,16 +35,16 @@ const ContactUsPage = () => {
                   <div className={styles.infoIcon}>📞</div>
                   <div className={styles.infoContent}>
                     <h3>Call Us</h3>
-                    <p>+91 1234567890</p>
-                    <p>Monday to Saturday: 9am - 6pm</p>
+                    <p>+91 81282591620</p>
+                    <p>Monday to Friday: 8am - 8pm</p>
                   </div>
                 </div>
                 
                 <div className={styles.infoItem}>
-                  <div className={styles.infoIcon}>✉️</div>
+                  <div className={styles.infoIcon}>🚨</div>
                   <div className={styles.infoContent}>
-                    <h3>Email Us</h3>
-                    <p>dhshah15532@gmail.com</p>
+                    <h3>Emergency</h3>
+                    <p>24/7</p>
                   </div>
                 </div>
               </div>

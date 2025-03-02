@@ -7,8 +7,8 @@ const DiabeticFootSurgeryPage = () => {
     <div className={styles.surgeryPage}>
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1>Diabetic Foot Surgery</h1>
-          <p>Advanced surgical solutions for diabetic foot complications</p>
+          <h1 style={{ color: 'white'}}>Diabetic Foot Surgery</h1>
+          <p style={{ color: 'white'}}>Advanced surgical solutions for diabetic foot complications</p>
           <Link href="/contact-us" className="btn btn-primary">
             Book an Appointment
           </Link>
@@ -18,7 +18,7 @@ const DiabeticFootSurgeryPage = () => {
       <div className="container">
         <section className={`${styles.infoSection} section-padding`}>
           <div className={styles.sectionHeader}>
-            <h2>When Surgery Becomes Necessary</h2>
+            <h2>When Surgery Becomes Necessary?</h2>
             <p>
               For patients with diabetes, foot complications can sometimes progress to a point where surgical intervention becomes necessary. 
               At Diabetic Foot Care Center, we offer specialized surgical procedures performed by experienced surgeons who understand the 

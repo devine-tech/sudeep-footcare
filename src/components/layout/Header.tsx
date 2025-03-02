@@ -12,16 +12,16 @@ const Header = () => {
         </div>
         <div className={styles.contactInfo}>
           <div className={styles.contactItem}>
-            <i className={styles.icon}>📞</i>
-            <span>+91 1234567890</span>
+            <p className={styles.icon}>📞</p>
+            <span>+91 81282591620</span>
           </div>
           <div className={styles.contactItem}>
-            <i className={styles.icon}>✉️</i>
-            <span>dhshah15532@gmail.com</span>
+            <p className={styles.icon}>🚨</p>
+            <span>Emergency: 24/7</span>
           </div>
           <div className={styles.contactItem}>
-            <i className={styles.icon}>📍</i>
-            <span>123 Healthcare Avenue, Mumbai, India</span>
+            <p className={styles.icon}>📍</p>
+            <span>Sudeep Hospital, Prasham Building, Opp. Lavanya Mall,<br /> Near Ashok Pan House, Citilight Road, Surat</span>
           </div>
         </div>
       </div>

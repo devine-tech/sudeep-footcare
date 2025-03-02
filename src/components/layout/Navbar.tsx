@@ -60,29 +60,29 @@ const Navbar = () => {
           <div className={styles.topInfo}>
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
-                <i className={styles.icon}>📞</i>
-                <span>+91 1234567890</span>
+                <span className={styles.icon}>📞</span>
+                <span>+91 8128259162</span>
               </div>
               <div className={styles.contactItem}>
-                <i className={styles.icon}>✉️</i>
-                <span>dhshah15532@gmail.com</span>
+                <span className={styles.icon}>🚨</span>
+                <span>Emergency: 24/7</span>
               </div>
               <div className={styles.contactItem}>
-                <i className={styles.icon}>⏰</i>
-                <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
+                <span className={styles.icon}>⏰</span>
+                <span>Mon-Friday: 8:00 AM - 8:00 PM</span>
               </div>
             </div>
-            <div className={styles.socialLinks}>
-              <a href="#" className={styles.socialIcon}>
-                <i>📱</i>
-              </a>
-              <a href="#" className={styles.socialIcon}>
-                <i>📘</i>
-              </a>
-              <a href="#" className={styles.socialIcon}>
-                <i>📸</i>
-              </a>
-            </div>
+            <div className={styles.mobileSocial}>
+                  <a href="#" className={styles.mobileSocialIcon}>
+                    <i> Surat | Navsari | Bardoli </i>
+                  </a>
+                  {/* <a href="#" className={styles.mobileSocialIcon}>
+                    <i>📘</i>
+                  </a>
+                  <a href="#" className={styles.mobileSocialIcon}>
+                    <i>📸</i>
+                  </a> */}
+                </div>
           </div>
         </div>
       </div>
@@ -152,11 +152,11 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className={styles.navItem}>
+              {/* <div className={styles.navItem}>
                 <Link href="/testimonials" className={styles.navLink} onClick={closeMenu}>
                   Testimonials
                 </Link>
-              </div>
+              </div> */}
 
               <div className={styles.navItem}>
                 <Link href="/blog" className={styles.navLink} onClick={closeMenu}>
@@ -173,29 +173,29 @@ const Navbar = () => {
               <div className={styles.mobileOnly}>
                 <div className={styles.mobileContactInfo}>
                   <div className={styles.mobileContactItem}>
-                    <i className={styles.icon}>📞</i>
-                    <span>+91 1234567890</span>
+                    <span className={styles.icon}>📞</span>
+                    <span>+91 8128259162</span>
                   </div>
                   <div className={styles.mobileContactItem}>
-                    <i className={styles.icon}>✉️</i>
-                    <span>dhshah15532@gmail.com</span>
+                  <span className={styles.icon}>🚨</span>
+                  <span>Emergency: 24/7</span>
                   </div>
                   <div className={styles.mobileContactItem}>
-                    <i className={styles.icon}>⏰</i>
-                    <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
+                    <span className={styles.icon}>⏰</span>
+                    <span>Mon-Friday: 8:00 AM - 8:00 PM</span>
                   </div>
                 </div>
                 
                 <div className={styles.mobileSocial}>
                   <a href="#" className={styles.mobileSocialIcon}>
-                    <i>📱</i>
+                    <i> Surat | Navsari | Bardoli </i>
                   </a>
-                  <a href="#" className={styles.mobileSocialIcon}>
+                  {/* <a href="#" className={styles.mobileSocialIcon}>
                     <i>📘</i>
                   </a>
                   <a href="#" className={styles.mobileSocialIcon}>
                     <i>📸</i>
-                  </a>
+                  </a> */}
                 </div>
               </div>
               

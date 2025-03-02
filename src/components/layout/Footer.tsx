@@ -47,19 +47,19 @@ const Footer = () => {
             <div className={styles.contactInfo}>
               <p className={styles.contactItem}>
                 <span className={styles.contactIcon}>📍</span>
-                123 Healthcare Avenue, Mumbai, India
+                <span>Sudeep Hospital, Prasham Building, Opp. Lavanya Mall,<br /> Near Ashok Pan House, Citilight Road, Surat</span>
               </p>
               <p className={styles.contactItem}>
                 <span className={styles.contactIcon}>📞</span>
-                +91 1234567890
+                +91 81282591620
               </p>
               <p className={styles.contactItem}>
-                <span className={styles.contactIcon}>✉️</span>
-                info@diabeticfootcare.com
+                <span className={styles.contactIcon}>🚨</span>
+                Emergency: 24/7
               </p>
               <p className={styles.contactItem}>
                 <span className={styles.contactIcon}>🕒</span>
-                Mon-Fri: 9:00 AM - 6:00 PM
+                Mon-Fri: 8:00 AM - 8:00 PM
               </p>
             </div>
           </div>
