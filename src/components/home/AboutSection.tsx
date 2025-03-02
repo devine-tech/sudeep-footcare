@@ -81,7 +81,7 @@ const AboutSection = () => {
             </div>
             
             <Link href="/dr-Prayas Kumar-Prayas Kumar" className="btn btn-primary">
-              Learn More About Dr. Shah
+              Learn More About Dr. Prayas Kumar
             </Link>
           </div>
         </div>
