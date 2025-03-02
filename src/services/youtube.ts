@@ -18,7 +18,7 @@ export interface YouTubeVideo {
 
 // This is a mock implementation that returns hardcoded videos
 // In a production environment, you would use the YouTube API with proper credentials
-export async function getYouTubeVideos(maxResults = 6): Promise<YouTubeVideo[]> {
+export async function getYouTubeVideos(): Promise<YouTubeVideo[]> {
   // For development and demonstration purposes, return mock data
   // These videos are publicly available from Dr. Prayas Kumar's channel
   return [

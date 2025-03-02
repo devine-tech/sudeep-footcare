@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './YouTubePlayer.module.css';
 
 interface YouTubePlayerProps {
@@ -13,7 +13,14 @@ const YouTubePlayer = ({ videoId, title, onClose }: YouTubePlayerProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Handle click outside to close
+  // Memoized handleClose function to prevent unnecessary re-renders
+  const handleClose = useCallback(() => {
+    setIsOpen(false);
+    setTimeout(() => {
+      onClose();
+    }, 300); // Match transition duration
+  }, [onClose]);
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
@@ -21,22 +28,18 @@ const YouTubePlayer = ({ videoId, title, onClose }: YouTubePlayerProps) => {
       }
     };
 
-    // Handle escape key to close
     const handleEscKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         handleClose();
       }
     };
 
-    // Add animation delay
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 50);
 
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('keydown', handleEscKey);
-    
-    // Prevent scrolling on body when modal is open
     document.body.style.overflow = 'hidden';
 
     return () => {
@@ -45,14 +48,7 @@ const YouTubePlayer = ({ videoId, title, onClose }: YouTubePlayerProps) => {
       document.body.style.overflow = 'auto';
       clearTimeout(timer);
     };
-  }, []);
-
-  const handleClose = () => {
-    setIsOpen(false);
-    setTimeout(() => {
-      onClose();
-    }, 300); // Match transition duration
-  };
+  }, [handleClose]); // Ensure handleClose is included in the dependency array
 
   return (
     <div className={`${styles.overlay} ${isOpen ? styles.open : ''}`}>

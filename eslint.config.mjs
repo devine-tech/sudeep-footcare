@@ -15,7 +15,8 @@ const eslintConfig = [
   // Disable the react/no-unescaped-entities rule
   {
     rules: {
-      "react/no-unescaped-entities": "off",  // Disable this rule
+      "react/no-unescaped-entities": "off", 
+      '@next/next/no-page-custom-font': 'off', // Disable this rule
     },
   },
 ];
