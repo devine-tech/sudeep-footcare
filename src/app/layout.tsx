@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ClientChatBot from "@/components/common/ClientChatBot";
 
 export const metadata: Metadata = {
   title: "Diabetic Foot Care Center | Dr. Prayas Kumar",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ClientChatBot />
       </body>
     </html>
   );
