@@ -1,0 +1,135 @@
+.conditionsPage {
+  padding-bottom: 60px;
+}
+
+.heroSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/diabetic-foot-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.sectionHeader p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.conditionSection {
+  margin-bottom: 60px;
+}
+
+.conditionSection h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.conditionCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conditionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.conditionCard h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.conditionCard p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.conditionIcon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #3498db;
+}
+
+.ctaSection {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ctaContent h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.ctaContent p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 300px;
+  }
+  
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+  
+  .heroContent p {
+    font-size: 1rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 1.8rem;
+  }
+}

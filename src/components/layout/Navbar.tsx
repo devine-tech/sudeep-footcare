@@ -152,6 +152,155 @@ const Navbar = () => {
                 </div>
               </div>
 
+              <div className={`${styles.navItem} ${styles.hasDropdown}`}>
+                <div 
+                  className={`${styles.navLink} ${activeDropdown === 'diabeticFootConditions' ? styles.active : ''}`} 
+                  onClick={() => toggleDropdown('diabeticFootConditions')}
+                >
+                  Diabetic Foot Conditions <i className={styles.dropdownIcon}>▼</i>
+                </div>
+                <div className={`${styles.dropdown} ${activeDropdown === 'diabeticFootConditions' ? styles.show : ''}`}>
+                  <div className={`${styles.dropdownItem} ${styles.hasSubmenu}`}>
+                    <div 
+                      className={styles.dropdownLink} 
+                      onClick={() => toggleSubmenu('boneConditions')}
+                    >
+                      Bone Conditions <i className={styles.dropdownIcon}>▶</i>
+                    </div>
+                    <div className={`${styles.submenu} ${activeSubmenu === 'boneConditions' ? styles.show : ''}`}>
+                      <Link href="/diabetic-foot-conditions/bone-conditions#bunions" className={styles.submenuLink} onClick={closeMenu}>
+                        Bunions
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/bone-conditions#osteoma" className={styles.submenuLink} onClick={closeMenu}>
+                        Osteoma
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/bone-conditions#charcots-foot" className={styles.submenuLink} onClick={closeMenu}>
+                        Charcot's Foot
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/bone-conditions#osteomyelitis" className={styles.submenuLink} onClick={closeMenu}>
+                        Osteomyelitis
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  <div className={`${styles.dropdownItem} ${styles.hasSubmenu}`}>
+                    <div 
+                      className={styles.dropdownLink} 
+                      onClick={() => toggleSubmenu('conditionsOnSole')}
+                    >
+                      Conditions On Sole <i className={styles.dropdownIcon}>▶</i>
+                    </div>
+                    <div className={`${styles.submenu} ${activeSubmenu === 'conditionsOnSole' ? styles.show : ''}`}>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#dry-skin" className={styles.submenuLink} onClick={closeMenu}>
+                        Dry Skin
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#blisters" className={styles.submenuLink} onClick={closeMenu}>
+                        Blisters
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#flat-foot" className={styles.submenuLink} onClick={closeMenu}>
+                        Flat Foot
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#night-pain" className={styles.submenuLink} onClick={closeMenu}>
+                        Night Pain
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#calluses" className={styles.submenuLink} onClick={closeMenu}>
+                        Calluses
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#corn" className={styles.submenuLink} onClick={closeMenu}>
+                        Corn
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#rest-pain" className={styles.submenuLink} onClick={closeMenu}>
+                        Rest Pain
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#athletes-foot" className={styles.submenuLink} onClick={closeMenu}>
+                        Athlete's Foot
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/conditions-on-sole#high-arch-foot" className={styles.submenuLink} onClick={closeMenu}>
+                        High Arch Foot
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  <div className={`${styles.dropdownItem} ${styles.hasSubmenu}`}>
+                    <div 
+                      className={styles.dropdownLink} 
+                      onClick={() => toggleSubmenu('muscleTendonConditions')}
+                    >
+                      Muscle-Tendon Conditions <i className={styles.dropdownIcon}>▶</i>
+                    </div>
+                    <div className={`${styles.submenu} ${activeSubmenu === 'muscleTendonConditions' ? styles.show : ''}`}>
+                      <Link href="/diabetic-foot-conditions/muscle-tendon-conditions#tendoachilis-rupture" className={styles.submenuLink} onClick={closeMenu}>
+                        Tendoachilis Rupture
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/muscle-tendon-conditions#claw-toe" className={styles.submenuLink} onClick={closeMenu}>
+                        Claw Toe
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/muscle-tendon-conditions#foot-drop" className={styles.submenuLink} onClick={closeMenu}>
+                        Foot Drop
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/muscle-tendon-conditions#tendonitis" className={styles.submenuLink} onClick={closeMenu}>
+                        Tendonitis
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/muscle-tendon-conditions#plantar-fasciitis" className={styles.submenuLink} onClick={closeMenu}>
+                        Plantar Fasciitis
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/muscle-tendon-conditions#foot-pain-treatments" className={styles.submenuLink} onClick={closeMenu}>
+                        Foot Pain Treatments
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  <div className={`${styles.dropdownItem} ${styles.hasSubmenu}`}>
+                    <div 
+                      className={styles.dropdownLink} 
+                      onClick={() => toggleSubmenu('nailConditions')}
+                    >
+                      Nail Conditions <i className={styles.dropdownIcon}>▶</i>
+                    </div>
+                    <div className={`${styles.submenu} ${activeSubmenu === 'nailConditions' ? styles.show : ''}`}>
+                      <Link href="/diabetic-foot-conditions/nail-conditions#fungal-nails" className={styles.submenuLink} onClick={closeMenu}>
+                        Fungal Nails
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/nail-conditions#brittle-nails" className={styles.submenuLink} onClick={closeMenu}>
+                        Brittle Nails
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/nail-conditions#nail-hematoma" className={styles.submenuLink} onClick={closeMenu}>
+                        Nail Hematoma
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/nail-conditions#discoloured-nails" className={styles.submenuLink} onClick={closeMenu}>
+                        Discoloured Nails
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/nail-conditions#ingrown-toenails" className={styles.submenuLink} onClick={closeMenu}>
+                        Ingrown Toenails
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  <div className={`${styles.dropdownItem} ${styles.hasSubmenu}`}>
+                    <div 
+                      className={styles.dropdownLink} 
+                      onClick={() => toggleSubmenu('softTissueInfections')}
+                    >
+                      Soft Tissue Infections <i className={styles.dropdownIcon}>▶</i>
+                    </div>
+                    <div className={`${styles.submenu} ${activeSubmenu === 'softTissueInfections' ? styles.show : ''}`}>
+                      <Link href="/diabetic-foot-conditions/soft-tissue-infections#cellulitis" className={styles.submenuLink} onClick={closeMenu}>
+                        Cellulitis
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/soft-tissue-infections#abscess" className={styles.submenuLink} onClick={closeMenu}>
+                        Abscess
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/soft-tissue-infections#necrotizing-fasciitis" className={styles.submenuLink} onClick={closeMenu}>
+                        Necrotizing Fasciitis
+                      </Link>
+                      <Link href="/diabetic-foot-conditions/soft-tissue-infections#gangrene" className={styles.submenuLink} onClick={closeMenu}>
+                        Gangrene
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* <div className={styles.navItem}>
                 <Link href="/testimonials" className={styles.navLink} onClick={closeMenu}>
                   Testimonials
