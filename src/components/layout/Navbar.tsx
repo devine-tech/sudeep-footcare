@@ -36,9 +36,9 @@ const Navbar = () => {
     };
   }, []);
 
-  // const toggleMenu = () => {
-  //   setIsOpen(!isOpen);
-  // };
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -93,7 +93,11 @@ const Navbar = () => {
             <Link href="public\images\Supreme-logo.png" className={styles.logo}>
               Diabetic Care Center
             </Link>
-
+            <div className={`${styles.hamburger} ${isOpen ? styles.active : ''}`} onClick={toggleMenu}>
+               <span className={styles.bar}></span>
+               <span className={styles.bar}></span>
+               <span className={styles.bar}></span>
+             </div>
  
 
             <div className={`${styles.navMenu} ${isOpen ? styles.active : ''}`} ref={dropdownRef}>
