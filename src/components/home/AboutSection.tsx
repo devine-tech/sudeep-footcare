@@ -12,10 +12,10 @@ const AboutSection = () => {
               {/* In production, replace with actual image */}
               <div className={styles.placeholderImage}>
                 <Image 
-                  src="/images/gallery-03.jpg" 
+                  src="/images/prayas_photo.png" 
                   alt="Dr. Prayas Kumar consulting with a patient" 
-                  width={600} 
-                  height={700}
+                  width={300} 
+                  height={300}
                   className={styles.aboutImage}
                 />
               </div>
@@ -80,7 +80,7 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <Link href="/dr-Prayas Kumar-Prayas Kumar" className="btn btn-primary">
+            <Link href="/drprayas" className="btn btn-primary">
               Learn More About Dr. Prayas Kumar
             </Link>
           </div>

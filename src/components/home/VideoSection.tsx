@@ -137,7 +137,7 @@ const VideoSection = () => {
 
         <div className={styles.ctaContainer}>
           <Link 
-            href="https://www.youtube.com/@DrAshutoshShah"
+            href="https://www.youtube.com/@DrPrayasKumar"
             target="_blank" 
             rel="noopener noreferrer"
             className="btn btn-primary"

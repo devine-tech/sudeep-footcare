@@ -1,13 +1,20 @@
 import Link from 'next/link';
 import styles from './Header.module.css';
+import Image from "next/image";
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">
-            <span className={styles.logoText}>Diabetic Foot Care Center</span>
+        <Link href="/">
+            <Image
+              src="/images/Supreme-logo.svg"
+              alt="Diabetic Care Center Logo"
+              width={150} 
+              height={50} 
+              className={styles.logo}
+            />
           </Link>
         </div>
         <div className={styles.contactInfo}>

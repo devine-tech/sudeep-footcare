@@ -47,7 +47,8 @@ const HeroSection = () => {
             {/* In production, replace with actual image */}
             <div className={styles.placeholderImage}>
               <Image 
-                src="/images/gallery-03.jpg" 
+              
+                src="/images/homesection.jpg" 
                 alt="Doctor consulting with diabetic patient" 
                 width={600} 
                 height={450}

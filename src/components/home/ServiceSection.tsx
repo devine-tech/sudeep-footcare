@@ -29,26 +29,26 @@ const ServiceSection = () => {
       title: 'Diabetic Foot Surgery',
       description: 'Specialized surgical interventions for diabetic foot complications including ulcers, infections, and deformities.',
       icon: '🔪',
-      link: '/diabetic-foot-surgery'
+      link: 'diabetic-foot-surgery/corrective_surgeries_for_ulcers'
     },
     {
       title: 'Diabetic Foot Conditions',
       description: 'Comprehensive diagnosis and treatment of various diabetic foot conditions such as neuropathy, ulcers, and Charcot foot.',
       icon: '🦶',
-      link: '/diabetic-foot-conditions'
+      link: 'diabetic-foot-conditions/bone'
     },
     {
-      title: 'Nonsurgical Management',
-      description: 'Conservative treatment approaches including wound care, offloading techniques, and infection management.',
+      title: 'Non Diabetic Ulcers',
+      description: 'Conservative treatment approaches including other types of non healing ulcers, varicose veins, and Vasculitis ulcers.',
       icon: '💊',
-      link: '/nonsurgical-management'
+      link: 'non-diabetic-ulcers/other_types_ulcers'
     },
-    {
-      title: 'Footwear Services',
-      description: 'Custom diabetic footwear and orthotics designed to prevent complications and promote healing.',
-      icon: '👞',
-      link: '/footwear-services'
-    }
+    // {
+    //   title: 'Footwear Services',
+    //   description: 'Custom diabetic footwear and orthotics designed to prevent complications and promote healing.',
+    //   icon: '👞',
+    //   link: '/footwear-services'
+    // }
   ];
 
   return (
