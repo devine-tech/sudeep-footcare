@@ -1,195 +1,338 @@
 import React from 'react';
-import styles from './page.module.css';
 import Link from 'next/link';
+import styles from './page.module.css';
+
+export const metadata = {
+  title: 'Vascular Surgery for Diabetes | Diabetic Limb Salvage Center',
+  description: 'Comprehensive surgical and medical treatments for diabetic vascular disease including angioplasty, bypass procedures, and advanced medical therapies.',
+};
 
 const VascularSurgeryPage = () => {
   return (
-    <div className={styles.conditionsPage}>
-      <div className={styles.heroSection}>
+    <div className={styles.container}>
+      <div className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 style={{ color: 'white'}}>Vascular Surgery for Diabetes</h1>
-          <p style={{ color: 'white'}}>Advanced interventions for diabetic vascular complications</p>
-          <Link href="/contact-us" className="btn btn-primary">
-            Book an Appointment
-          </Link>
+          <h1>Vascular Surgery for Diabetes</h1>
+          <p>
+            Restoring blood flow and preventing amputations through advanced vascular interventions
+          </p>
         </div>
       </div>
 
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3">
-            <div className={styles.navigationMenu}>
-              <h3>Quick Navigation</h3>
-              <ul className={styles.navigationList}>
-                <li><a href="#angioplasty">Peripheral Angioplasty</a></li>
-                <li><a href="#bypass">Vascular Bypass</a></li>
-                <li><a href="#medical-management">Medical Management</a></li>
-              </ul>
+      <div className={styles.breadcrumbs}>
+        <Link href="/">Home</Link> &gt; 
+        <Link href="/treatments">Treatments</Link> &gt; 
+        <span>Diabetic Vascular Care</span>
+      </div>
+
+      <div className={styles.contentWrapper}>
+        <div className={styles.sideNav}>
+          <div className={styles.sideNavSticky}>
+            <h3>Quick Navigation</h3>
+            <ul>
+              <li><a href="#angioplasty">Peripheral Angioplasty</a></li>
+              <li><a href="#bypass">Vascular Bypass</a></li>
+              <li><a href="#medical-management">Medical Management</a></li>
+            </ul>
+            <div className={styles.consultationCard}>
+              <h3>Vascular Evaluation</h3>
+              <p>Our diabetic limb salvage team specializes in complex vascular cases.</p>
+              <Link href="/contact-us" className={styles.consultButton}>
+                Request Vascular Assessment
+              </Link>
             </div>
           </div>
-          
-          <div className="col-lg-9">
-            <section className={`${styles.infoSection} section-padding`}>
-              <div className={styles.sectionHeader}>
-                <h2>Diabetic Vascular Interventions</h2>
-                <p>
-                  Diabetes can cause significant damage to blood vessels, particularly in the legs and feet. 
-                  Our vascular specialists provide comprehensive surgical and medical treatments to restore 
-                  circulation and prevent complications like non-healing wounds and amputations.
-                </p>
-              </div>
-            </section>
+        </div>
 
-            <section id="angioplasty" className={styles.conditionSection}>
+        <div className={styles.mainContent}>
+          <section className={styles.introduction}>
+            <h2>Diabetic Vascular Disease Management</h2>
+            <p>
+              Diabetes accelerates vascular disease through multiple pathways, often leading to 
+              critical limb ischemia. Our multidisciplinary approach combines endovascular, 
+              surgical, and medical therapies tailored to each patient's vascular anatomy 
+              and overall health status.
+            </p>
+            <div className={styles.warningBox}>
+              <h3>Critical Consideration</h3>
+              <p>
+                Diabetic patients often have distal, calcified vessels requiring specialized 
+                techniques. Wound healing depends on adequate perfusion, infection control, 
+                and metabolic management.
+              </p>
+            </div>
+          </section>
+
+          {/* Peripheral Angioplasty Section */}
+          <section id="angioplasty" className={styles.conditionSection}>
+            <div className={styles.conditionHeader}>
               <h2>Peripheral Angioplasty</h2>
-              <div className={styles.conditionCard}>
-                <div className={styles.conditionIcon}>💉</div>
-                <h3>About Peripheral Angioplasty</h3>
-                <p>
-                  A minimally invasive procedure to open narrowed or blocked arteries in the legs, improving 
-                  blood flow to the feet. This is often the first-line surgical intervention for diabetic 
-                  peripheral artery disease (PAD).
-                </p>
-                
-                <h3>Procedure Details</h3>
-                <div className={styles.procedureGrid}>
-                  <div className={styles.procedureType}>
-                    <h4>Balloon Angioplasty</h4>
-                    <p>Inflation of a small balloon to compress plaque against artery walls</p>
-                  </div>
-                  <div className={styles.procedureType}>
-                    <h4>Stent Placement</h4>
-                    <p>Permanent mesh scaffold to keep artery open</p>
-                  </div>
-                  <div className={styles.procedureType}>
-                    <h4>Atherectomy</h4>
-                    <p>Plaque removal using specialized devices</p>
-                  </div>
+              <div className={styles.conditionImage}>
+                <div className={styles.imagePlaceholder}>
+                  <div className={styles.placeholderText}>Diabetic Angioplasty Procedure Illustration</div>
                 </div>
-
-                <h3>Benefits for Diabetic Patients</h3>
-                <ul>
-                  <li>Minimal incision (usually through a small needle puncture)</li>
-                  <li>Local anesthesia option for high-risk patients</li>
-                  <li>Same-day discharge in most cases</li>
-                  <li>Faster recovery than open surgery</li>
-                  <li>Can be repeated if needed</li>
-                </ul>
-
-                <h3>Recovery Expectations</h3>
-                <ul>
-                  <li>1-2 days of limited activity post-procedure</li>
-                  <li>Regular foot checks for improved circulation signs</li>
-                  <li>Medication regimen to prevent re-narrowing</li>
-                  <li>Follow-up vascular studies in 3-6 months</li>
-                </ul>
               </div>
-            </section>
+            </div>
+            <div className={styles.conditionContent}>
+              <h3>About Endovascular Revascularization</h3>
+              <p>
+                Minimally invasive angioplasty techniques can restore blood flow in 
+                diabetic patients with peripheral arterial disease (PAD), often avoiding 
+                open surgery. Specialized approaches address unique diabetic vascular challenges.
+              </p>
+              
+              <h3>Angioplasty Techniques</h3>
+              <div className={styles.techniqueGrid}>
+                <div className={styles.techniqueType}>
+                  <h4>Balloon Angioplasty</h4>
+                  <ul>
+                    <li>Low-profile balloons</li>
+                    <li>Long inflation times</li>
+                    <li>Calcium modification</li>
+                  </ul>
+                </div>
+                <div className={styles.techniqueType}>
+                  <h4>Atherectomy</h4>
+                  <ul>
+                    <li>Rotational (Diamondback)</li>
+                    <li>Orbital (CSI)</li>
+                    <li>Directional (SilverHawk)</li>
+                  </ul>
+                </div>
+                <div className={styles.techniqueType}>
+                  <h4>Drug-Eluting Therapies</h4>
+                  <ul>
+                    <li>Drug-coated balloons</li>
+                    <li>Eluting stents</li>
+                    <li>Paclitaxel-based</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h3>Diabetic-Specific Considerations</h3>
+              <div className={styles.approachGrid}>
+                <div className={styles.approachType}>
+                  <h4>Below-the-Knee</h4>
+                  <ul>
+                    <li>Tibial artery interventions</li>
+                    <li>Pedal loop reconstruction</li>
+                    <li>Transmetatarsal access</li>
+                  </ul>
+                </div>
+                <div className={styles.approachType}>
+                  <h4>Challenges</h4>
+                  <ul>
+                    <li>Heavy calcification</li>
+                    <li>Long segment occlusions</li>
+                    <li>Multi-level disease</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className={styles.complicationBox}>
+                <h4>Outcomes Data</h4>
+                <p>
+                  Diabetic patients have 70-85% technical success rates for tibial interventions. 
+                  1-year patency rates range from 50-70%. Wound healing rates improve by 40-60% 
+                  with successful revascularization.
+                </p>
+              </div>
+            </div>
+          </section>
 
-            <section id="bypass" className={styles.conditionSection}>
+          {/* Vascular Bypass Section */}
+          <section id="bypass" className={styles.conditionSection}>
+            <div className={styles.conditionHeader}>
               <h2>Vascular Bypass</h2>
-              <div className={styles.conditionCard}>
-                <div className={styles.conditionIcon}>🔄</div>
-                <h3>About Vascular Bypass Surgery</h3>
-                <p>
-                  When arteries are too damaged for angioplasty, bypass surgery creates a new pathway for blood 
-                  flow using either a synthetic graft or the patient's own vein. This is typically recommended 
-                  for extensive blockages in diabetic patients.
-                </p>
-
-                <h3>Common Bypass Procedures</h3>
-                <div className={styles.procedureGrid}>
-                  <div className={styles.procedureType}>
-                    <h4>Femoral-Popliteal Bypass</h4>
-                    <p>Above-knee or below-knee bypass for thigh blockages</p>
-                  </div>
-                  <div className={styles.procedureType}>
-                    <h4>Tibial Bypass</h4>
-                    <p>Direct flow restoration to foot arteries</p>
-                  </div>
-                  <div className={styles.procedureType}>
-                    <h4>Pedal Bypass</h4>
-                    <p>Microsurgical bypass to foot vessels</p>
-                  </div>
+              <div className={styles.conditionImage}>
+                <div className={styles.imagePlaceholder}>
+                  <div className={styles.placeholderText}>Distal Bypass Illustration</div>
                 </div>
-
-                <h3>Surgical Considerations</h3>
-                <ul>
-                  <li>Preoperative vein mapping if using autologous vein</li>
-                  <li>Choice between general or regional anesthesia</li>
-                  <li>Intraoperative angiography to confirm patency</li>
-                  <li>Combined with wound care procedures when needed</li>
-                </ul>
-
-                <h3>Recovery Process</h3>
-                <ol>
-                  <li>3-5 day hospital stay for monitoring</li>
-                  <li>Incision care for 2-3 weeks</li>
-                  <li>Gradual increase in walking distance</li>
-                  <li>Lifelong anticoagulation management</li>
-                  <li>Regular vascular checkups</li>
-                </ol>
               </div>
-            </section>
-
-            <section id="medical-management" className={styles.conditionSection}>
-              <h2>Medical Management of Blood Vessel Disease</h2>
-              <div className={styles.conditionCard}>
-                <div className={styles.conditionIcon}>💊</div>
-                <h3>Comprehensive Medical Therapy</h3>
-                <p>
-                  Alongside surgical options, optimal medical management is crucial for slowing progression 
-                  of diabetic vascular disease and maintaining surgical results.
-                </p>
-
-                <h3>Key Treatment Components</h3>
-                <div className={styles.procedureGrid}>
-                  <div className={styles.procedureType}>
-                    <h4>Glycemic Control</h4>
-                    <p>HbA1c targets tailored to individual risk factors</p>
-                  </div>
-                  <div className={styles.procedureType}>
-                    <h4>Antiplatelet Therapy</h4>
-                    <p>Aspirin or clopidogrel to prevent clots</p>
-                  </div>
-                  <div className={styles.procedureType}>
-                    <h4>Lipid Management</h4>
-                    <p>Statins to stabilize plaque and reduce inflammation</p>
-                  </div>
+            </div>
+            <div className={styles.conditionContent}>
+              <h3>About Surgical Revascularization</h3>
+              <p>
+                When endovascular approaches are insufficient, bypass surgery creates 
+                new pathways for blood flow using autogenous vein or prosthetic grafts. 
+                Diabetic patients often require distal bypass to foot vessels.
+              </p>
+              
+              <h3>Bypass Options</h3>
+              <div className={styles.levelGrid}>
+                <div className={styles.levelType}>
+                  <h4>Conduit Selection</h4>
+                  <ul>
+                    <li>Great saphenous vein (preferred)</li>
+                    <li>Arm vein alternatives</li>
+                    <li>Prosthetic with distal vein cuff</li>
+                  </ul>
                 </div>
-
-                <h3>Advanced Medical Therapies</h3>
-                <ul>
-                  <li><strong>Vasodilators:</strong> Cilostazol for improved walking distance</li>
-                  <li><strong>Blood pressure control:</strong> ACE inhibitors preferred</li>
-                  <li><strong>Wound healing adjuncts:</strong> Pentoxifylline for microcirculation</li>
-                  <li><strong>Novel agents:</strong> SGLT2 inhibitors with cardiovascular benefits</li>
-                </ul>
-
-                <h3>Monitoring Protocol</h3>
-                <ul>
-                  <li>Regular ankle-brachial index (ABI) measurements</li>
-                  <li>Annual vascular ultrasound studies</li>
-                  <li>Foot perfusion assessment with TcPO2 or skin perfusion pressure</li>
-                  <li>Continuous glucose monitoring optimization</li>
-                </ul>
+                <div className={styles.levelType}>
+                  <h4>Target Vessels</h4>
+                  <ul>
+                    <li>Femoral-popliteal</li>
+                    <li>Femoral-tibial</li>
+                    <li>Pedal or plantar artery</li>
+                  </ul>
+                </div>
+                <div className={styles.levelType}>
+                  <h4>Hybrid Procedures</h4>
+                  <ul>
+                    <li>Combined endovascular/open</li>
+                    <li>Inflow/outflow optimization</li>
+                    <li>Sequential multilevel</li>
+                  </ul>
+                </div>
               </div>
-            </section>
-
-            <section className={styles.ctaSection}>
-              <div className={styles.ctaContent}>
-                <h2>Comprehensive Vascular Care</h2>
+              
+              <h3>Surgical Considerations</h3>
+              <div className={styles.considerationGrid}>
+                <div className={styles.considerationType}>
+                  <h4>Preoperative</h4>
+                  <ul>
+                    <li>Vein mapping ultrasound</li>
+                    <li>Optimize glycemic control</li>
+                    <li>Infection control</li>
+                  </ul>
+                </div>
+                <div className={styles.considerationType}>
+                  <h4>Intraoperative</h4>
+                  <ul>
+                    <li>Microsurgical technique</li>
+                    <li>Valve lysis</li>
+                    <li>Competitive flow assessment</li>
+                  </ul>
+                </div>
+                <div className={styles.considerationType}>
+                  <h4>Postoperative</h4>
+                  <ul>
+                    <li>Graft surveillance</li>
+                    <li>Wound care</li>
+                    <li>Antiplatelet therapy</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className={styles.complicationBox}>
+                <h4>Diabetic Outcomes</h4>
                 <p>
-                  Our team combines surgical expertise with advanced medical management to provide complete 
-                  vascular care for diabetic patients. Early intervention can prevent complications and 
-                  preserve limb function.
+                  5-year patency rates: 60-70% for vein grafts, 30-45% for prosthetic. 
+                  Limb salvage rates exceed 80% at 3 years when combined with proper 
+                  wound care. Mortality rates higher than non-diabetics (5-10% at 1 year).
                 </p>
-                <Link href="/contact-us" className="btn btn-accent">
-                  Schedule a Vascular Assessment
-                </Link>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+
+          {/* Medical Management Section */}
+          <section id="medical-management" className={styles.conditionSection}>
+            <div className={styles.conditionHeader}>
+              <h2>Medical Management</h2>
+              <div className={styles.conditionImage}>
+                <div className={styles.imagePlaceholder}>
+                  <div className={styles.placeholderText}>Medical Therapy Illustration</div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.conditionContent}>
+              <h3>About Comprehensive Medical Therapy</h3>
+              <p>
+                Optimal medical management is essential alongside revascularization 
+                to improve outcomes and prevent disease progression in diabetic 
+                vascular patients. Our protocol addresses multiple risk factors.
+              </p>
+              
+              <h3>Key Treatment Components</h3>
+              <div className={styles.levelGrid}>
+                <div className={styles.levelType}>
+                  <h4>Glycemic Control</h4>
+                  <ul>
+                    <li>HbA1c targets (individualized)</li>
+                    <li>Inpatient insulin protocols</li>
+                    <li>Newer agents with CV benefits</li>
+                  </ul>
+                </div>
+                <div className={styles.levelType}>
+                  <h4>Antiplatelet/Antithrombotic</h4>
+                  <ul>
+                    <li>Aspirin/clopidogrel</li>
+                    <li>Vorapaxar (select cases)</li>
+                    <li>Rivaroxaban (vascular dose)</li>
+                  </ul>
+                </div>
+                <div className={styles.levelType}>
+                  <h4>Risk Factor Modification</h4>
+                  <ul>
+                    <li>Statin therapy (high intensity)</li>
+                    <li>Blood pressure control</li>
+                    <li>Smoking cessation</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h3>Advanced Medical Therapies</h3>
+              <div className={styles.considerationGrid}>
+                <div className={styles.considerationType}>
+                  <h4>Pharmacologic</h4>
+                  <ul>
+                    <li>Cilostazol (claudication)</li>
+                    <li>Pentoxifylline</li>
+                    <li>Prostanoids (critical limb ischemia)</li>
+                  </ul>
+                </div>
+                <div className={styles.considerationType}>
+                  <h4>Lifestyle</h4>
+                  <ul>
+                    <li>Supervised exercise therapy</li>
+                    <li>Nutrition counseling</li>
+                    <li>Podiatric care</li>
+                  </ul>
+                </div>
+                <div className={styles.considerationType}>
+                  <h4>Emerging</h4>
+                  <ul>
+                    <li>SGLT2 inhibitors</li>
+                    <li>GLP-1 receptor agonists</li>
+                    <li>Stem cell therapy (investigational)</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className={styles.complicationBox}>
+                <h4>Clinical Impact</h4>
+                <p>
+                  Comprehensive medical management reduces cardiovascular events by 25-30% 
+                  and amputation risk by 20-25% in diabetic PAD patients. Medication 
+                  adherence is critical for long-term success.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className={styles.conclusion}>
+            <h2>Integrated Diabetic Vascular Care</h2>
+            <p>
+              Our limb salvage program combines:
+            </p>
+            <ul className={styles.bulletList}>
+              <li>Advanced revascularization techniques</li>
+              <li>Multidisciplinary wound care</li>
+              <li>Aggressive medical optimization</li>
+              <li>Individualized rehabilitation</li>
+              <li>Long-term surveillance</li>
+            </ul>
+            <div className={styles.ctaBox}>
+              <h3>Need Vascular Assessment?</h3>
+              <p>
+                Our diabetic vascular specialists can evaluate your circulation 
+                and recommend personalized treatment options.
+              </p>
+              <Link href="/contact-us" className={styles.ctaButton}>
+                Schedule Vascular Consultation
+              </Link>
+            </div>
+          </section>
         </div>
       </div>
     </div>
