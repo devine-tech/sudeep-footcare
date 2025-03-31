@@ -36,9 +36,9 @@ const Navbar = () => {
     };
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   const closeMenu = () => {
     setIsOpen(false);
