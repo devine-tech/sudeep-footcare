@@ -92,14 +92,14 @@
 .placeholderImage {
   width: 100%;
   aspect-ratio: 4/3;
-  background-color: #e0e0e0;
+  /* background-color: #e0e0e0; */
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #777;
   font-weight: 500;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
 }
 
 @media (max-width: 1024px) {

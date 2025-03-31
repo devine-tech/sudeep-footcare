@@ -91,74 +91,7 @@ export async function getYouTubeVideos(): Promise<YouTubeVideo[]> {
         }
       }
     },
-    {
-      id: "_PudBO2TjQI?si=0zMMyJZPORJn4R4e",
-      title: "Understanding Diabetic Foot Complications",
-      description: "Dr. Prayas Kumar explains the common complications that can arise with diabetic foot conditions and how to recognize early warning signs.",
-      publishedAt: "2024-02-15T10:00:00Z",
-      thumbnails: {
-        default: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 480,
-          height: 360
-        }
-      }
-    },
-    {
-      id: "_PudBO2TjQI?si=0zMMyJZPORJn4R4e",
-      title: "Understanding Diabetic Foot Complications",
-      description: "Dr. Prayas Kumar explains the common complications that can arise with diabetic foot conditions and how to recognize early warning signs.",
-      publishedAt: "2024-02-15T10:00:00Z",
-      thumbnails: {
-        default: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 480,
-          height: 360
-        }
-      }
-    },{
-      id: "_PudBO2TjQI?si=0zMMyJZPORJn4R4e",
-      title: "Understanding Diabetic Foot Complications",
-      description: "Dr. Prayas Kumar explains the common complications that can arise with diabetic foot conditions and how to recognize early warning signs.",
-      publishedAt: "2024-02-15T10:00:00Z",
-      thumbnails: {
-        default: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 120,
-          height: 90
-        },
-        medium: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 320,
-          height: 180
-        },
-        high: {
-          url: "https://images.pexels.com/photos/30798686/pexels-photo-30798686/free-photo-of-close-up-of-foot-surgery-in-operating-room.jpeg",
-          width: 480,
-          height: 360
-        }
-      }
-    },
+   
   ];
 
   // When you have YouTube API credentials, you would use this code instead:
