@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import { AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,8 +74,8 @@ const Navbar = () => {
               </div>
             </div>
             <div className={styles.mobileSocial}>
-                  <a href="#" className={styles.mobileSocialIcon}>
-                    <i> Surat | Navsari | Bardoli </i>
+                  <a  className={styles.mobileSocialIcon}>
+                    Surat | Navsari | Bardoli
                   </a>
                   {/* <a href="#" className={styles.mobileSocialIcon}>
                     <i>📘</i>
@@ -102,6 +103,11 @@ const Navbar = () => {
 
             <div className={`${styles.navMenu} ${isOpen ? styles.active : ''}`} ref={dropdownRef}>
               <div className={styles.navItem}>
+              <div className={styles.mobileHeader}>
+  <button className={styles.mobileCloseButton} onClick={closeMenu}>
+    <AiOutlineClose />
+  </button>
+</div>
                 <Link href="/" className={styles.navLink} onClick={closeMenu}>
                   Home
                 </Link>
@@ -742,9 +748,9 @@ const Navbar = () => {
                 </div>
                 
                 <div className={styles.mobileSocial}>
-                  <a href="#" className={styles.mobileSocialIcon}>
-                    <i> Surat | Navsari | Bardoli </i>
-                  </a>
+                  <p>
+                    Surat | Navsari | Bardoli
+                  </p>
                   {/* <a href="#" className={styles.mobileSocialIcon}>
                     <i>📘</i>
                   </a>
@@ -758,9 +764,7 @@ const Navbar = () => {
                 <Link href="/contact-us">Book an Appointment</Link>
               </button>
               
-              <button className={styles.mobileCloseButton} onClick={closeMenu}>
-                Close Menu
-              </button>
+             
             </div>
           </div>
         </div>
